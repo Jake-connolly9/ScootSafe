@@ -3,5 +3,14 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def say_hello(request):
+def FMD(request):
     return render(request,'MapView.html')
+
+def choice(request):
+    return render(request,'ViewChoice.html')
+
+def login(request):
+    return render(request, 'login_page.html')
+
+def BlackBox(request):
+    return render(request, 'blackboxView.html')
