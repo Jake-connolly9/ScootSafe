@@ -10,7 +10,7 @@ def choice(request):
     return render(request,'ViewChoice.html')
 
 def login(request):
-    return render(request, 'login_page.html')
+    return render(request, 'LoginPage.html')
 
 def BlackBox(request):
-    return render(request, 'blackboxView.html')
+    return render(request, 'BlackboxView.html')
