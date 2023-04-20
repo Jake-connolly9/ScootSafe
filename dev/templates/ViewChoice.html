@@ -7,15 +7,24 @@
         <h1>
         ScootSafe
         </h1>
-        <button type="button">
+        <button onclick="window.location.href = 'FMD/'">
             View GPS
         </button>
         <br>
-        <button type="button">
+        <button onclick="window.location.href = 'blackbox/'">
             View Blackbox
         </button>
-        <form method="post" action="/login/">
-            {{form}}
+
+        <br>
+        <br>
+        <br>
+        <h3>
+            New Device
+        </h3>
+
+        <form method="post" action="">
+            {% csrf_token %}
+            {{form.as_p}}
             <button type="submit", name="save">
                  Register Device
             </button>

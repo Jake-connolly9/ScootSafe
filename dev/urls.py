@@ -8,4 +8,5 @@ urlpatterns = [
     path('', views.login),
     path('choice/blackbox/', views.BlackBox),
     path('choice/', views.choice),
+    path('SignUp/', views.SignUp)
 ]
