@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewpoint" content = "width=device-width, initial-scale=1">
-        <title>ScootSafe Choice</title>
-    </head>
+{% extends 'base.html' %}
+{% block title %}
+<title> ScootSafe Choice </title>
+{% endblock %}
 
-    <body>
+{% block content %}
         <h1>
         ScootSafe
         </h1>
@@ -17,5 +14,10 @@
         <button type="button">
             View Blackbox
         </button>
-    </body>
-</html>
+        <form method="post" action="/login/">
+            {{form}}
+            <button type="submit", name="save">
+                 Register Device
+            </button>
+         </form>
+{% endblock %}

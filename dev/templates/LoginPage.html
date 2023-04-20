@@ -1,21 +1,21 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewpoint" content = "width=device-width, initial-scale=1">
-        <title>ScootSafe Login</title>
-    </head>
+{% extends 'base.html' %}
+{% block title %}
+<title>ScootSafe Login</title>
+{% endblock %}
+
 
     <body>
-        <h1>
-        ScootSafe Login
-        </h1>
-        <input type="text">
-            username
-    </input>
-        <br>
-        <input type="password">
-            password
-</input>
+        {% block content %}
+        <div class="container">
+            <div class="login-bar">
+                <form method="post" action="/login/">
+                   {{form}}
+                   <button type="submit", name="save">
+                        Enter
+                   </button>
+                </form>
+            </div>
+        </div>
+        {% endblock %}
     </body>
 </html>
