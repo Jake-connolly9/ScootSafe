@@ -15,10 +15,11 @@ def choice(request):
 
         if form.is_valid():
             n = form.cleaned_data["device_name"]
-            t = Device_Group(device_name=n)
-            t.save()
-
-
+            la = form.cleaned_data["gps_latitude"]
+            lo = form.cleaned_data["gps_longtitude"]
+            a = Device_Group(id=1)
+            a.device_set.create(device_name = n, gps_latitude = la, gps_longtitude = lo)
+            a.save()
 
     else:
         form = CreateDevice()
