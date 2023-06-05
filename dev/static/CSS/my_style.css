@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%
+}
+
+body {
+    background-color: powderblue;
+    margin: 0;
+    height: 100vh;
+    min-height: 100%;
+    width: 100vw;
+}
+
+div {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    border: 10px solid black;
+    font-size: medium;
+    padding: 300px;
+    margin: 0klpx;
+    text-align: center;
+
+}

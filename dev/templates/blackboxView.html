@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>ScootSafe Blackbox</title>
+<link rel="stylesheet" type="text/css" href="{% static 'CSS/my_style.css' %}" >
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>
+        ScootSafe BlackBox
+        </h1>
+        <br>
+        <button onclick="window.location.href = '/dev/choice/'">
+            back
+        </button>
+        <br>
+        <select name="vehicles" id="vehicles">
+            <option value="device1">Device1</option>
+        </select>
+        <h2>
+            This is our black box data
+        </h2>
+        <p>
+            {% load static %} <img src="{% static "Images/image1.jpg" %}" width="300" height="200"/>
+            {% load static %} <img src="{% static "Images/image2.jpg" %}" width="300" height="200"/>
+            {% load static %} <img src="{% static "Images/image3.jpg" %}" width="300" height="200"/>
+            {% load static %} <img src="{% static "Images/image4.jpg" %}" width="300" height="200"/>
+        </p>
+        </div>
+        {% endblock %}

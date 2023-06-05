@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title> ScootSafe Choice </title>
+<link rel="stylesheet" type="text/css" href="{% static 'CSS/my_style.css' %}" >
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>
+        ScootSafe
+        </h1>
+        <button onclick="window.location.href = 'FMD/'">
+            View GPS
+        </button>
+        <br>
+        <button onclick="window.location.href = 'blackbox/'">
+            View Blackbox
+        </button>
+
+        <br>
+        <br>
+        <br>
+        <h3>
+            New Device
+        </h3>
+
+        <form method="post" action="">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit", name="save">
+                 Register Device
+            </button>
+         </form>
+    </div>
+{% endblock %}
