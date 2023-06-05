@@ -11,6 +11,6 @@ https://github.com/ankraft/ACME-oneM2M-CSE
 If you are new to the ACME server, this github will help you understand it:-
 https://github.com/ankraft/onem2m-jupyter-notebooks
 
-Be sure to chane the IP address
+Be sure to change the IP address
 
 Be sure to change the path for the .wav file
