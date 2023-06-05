@@ -7,7 +7,14 @@ from .forms import CreateDevice, Login, Register_Account
 
 def FMD(request):
     ls = Device_Group.objects.get(id=1)
-    return render(request,'MapView.html', {"ls":ls}) 
+    device = Device.objects.get(id=9)
+    lng = float(device.gps_longtitude)
+    lat = float(device.gps_latitude)
+    device.gps_longtitude = lng - .0005
+    device.save()
+    device.gps_latitude = lat - .0005
+    device.save()
+    return render(request,'MapView.html', {"ls":ls, "device":device, "lng":lng, "lat":lat}) 
 
 def choice(request):
     if request.method == "POST":
@@ -17,7 +24,7 @@ def choice(request):
             n = form.cleaned_data["device_name"]
             la = form.cleaned_data["gps_latitude"]
             lo = form.cleaned_data["gps_longtitude"]
-            a = Device_Group(id=1)
+            a = Device_Group.objects.get(id=1)
             a.device_set.create(device_name = n, gps_latitude = la, gps_longtitude = lo)
             a.save()
 

@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
 <title>ScootSafe Login</title>
+<link rel="stylesheet" type="text/css" href="{% static 'CSS/my_style.css' %}" >
 {% endblock %}
 
         {% block content %}
         <div class="container">
-            <div class="login-bar">
-                <h3>
+                <header>
                     Log In
-                </h3>
+                </header>
                 <form method="post" action="">
                     {% csrf_token %}
                     {{form.as_p}}
@@ -26,5 +27,4 @@
                     Sign Up Here
                 </button>   
             </div>
-        </div>
         {% endblock %}

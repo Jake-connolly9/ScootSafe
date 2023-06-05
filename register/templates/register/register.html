@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content = "width=device-width, initial-scale=1">
+        <title>Register</title>
+    </head>
+
+<body>
+<form method="POST" class="form-group">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit" class="btn btn-success">Register</button>
+</form>
+</body>

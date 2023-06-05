@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
 <title> ScootSafe Choice </title>
+<link rel="stylesheet" type="text/css" href="{% static 'CSS/my_style.css' %}" >
 {% endblock %}
 
 {% block content %}
+    <div class="container">
         <h1>
         ScootSafe
         </h1>
@@ -29,4 +32,5 @@
                  Register Device
             </button>
          </form>
+    </div>
 {% endblock %}
